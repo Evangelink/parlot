@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net9.0</TargetFrameworks>
@@ -7,7 +6,6 @@
     <AnalysisLevel>latest-Default</AnalysisLevel>
     <SignAssembly>False</SignAssembly>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" />
     <PackageReference Include="Pidgin" />
@@ -15,10 +13,11 @@
     <PackageReference Include="Superpower" />
     <PackageReference Include="Newtonsoft.Json" />
   </ItemGroup>
-  
   <ItemGroup>
     <ProjectReference Include="..\..\src\Parlot\Parlot.csproj" />
     <ProjectReference Include="..\..\src\Samples\Samples.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <InternalsVisibleTo Include="Parlot.Benchmarks.UnitTests" />
+  </ItemGroup>
 </Project>
